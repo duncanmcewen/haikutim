@@ -1,0 +1,33 @@
+html {
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+}
+
+body {
+  max-width: 800px;
+  margin: 16px auto;
+}
+
+#counter {
+  margin: 16px 0;
+  padding: 8px;
+  font-size: 100px;
+}
+
+button {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+  padding: 6px 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+  color: black;
+  outline-width: thick;
+}
