@@ -1,6 +1,7 @@
-var time = 10;
+var time = 1;
 var timerStarted = false
 var counter = getById('counter')
+var haiku = getById('haiku')
 var intervalId
 
 function getById(id) {
@@ -35,7 +36,7 @@ function startTimer() {
       time = time - 1;
       //counter.style.backgroundColor = newColour
       counter.style.color = newColourText
-      getById('haiku').style.display = 'none'
+      haiku.style.display = 'none'
       console.log('hidden')
     } else {
       console.log("timer is finished");
@@ -61,7 +62,7 @@ button.addEventListener('click', function() {
     button.textContent = 'Start'
   } else {
     if (time === 0) {
-      time = 10
+      time = 1
     }
 
     startTimer()
@@ -75,13 +76,13 @@ button.addEventListener('click', function() {
 
 
 function showHide() {
-   getById('haiku').style.display = ''
+   haiku.style.display = 'block'
    console.log('i should be here')
   // if (timerStarted === true) {
-  //   getById('haiku').style.display = ''
+  //   haiku.style.display = ''
   //   console.log('i should be here')
   // }
   // else {
-  //   getById('haiku').style.display = 'none'
+  //   haiku.style.display = 'none'
   // }
 }

@@ -14,7 +14,10 @@
 <button id="button">Start</button>
 <div id="counter"></div>
 
-<textarea id="haiku">Your text here</textarea>
+<form method="post" action="/haiku">
+  <textarea id="haiku" name="haiku" style="display: none">Your text here</textarea>
+  <button type="submit">Submit</button>
+</form>
 
 <script src="main.js"></script>
 </body>
