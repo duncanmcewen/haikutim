@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,4 +25,8 @@ app.post('/haiku', function (req, res) {
   res.redirect('/haiku?message=' + req.body.haiku);
 })
 
-app.listen(3001)
+http.listen(3000, function() {
+  console.log('listening on *:3000');
+});
+
+//app.listen(3001)
