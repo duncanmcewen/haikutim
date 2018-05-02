@@ -25,8 +25,18 @@ app.post('/haiku', function (req, res) {
   res.redirect('/haiku?message=' + req.body.haiku);
 })
 
+// socket handlers
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+
+});
+
+
 http.listen(3000, function() {
   console.log('listening on *:3000');
 });
 
-//app.listen(3001)
+// app.listen(3001)
